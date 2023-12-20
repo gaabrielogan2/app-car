@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Carros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+        <div id="header">
+            <img id="img" src="./car.jpeg" alt="Ícone de Carro" onclick="abrirModal()">
+        </div>
+        
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+            <img class="modal-conteudo" id="imagemModal" src="" alt="Imagem Modal">
+      
+        
+        
+    </div>
+    <h1>Formulário de Teste para Carros</h1>
+    <span id="cart">🚗</span>
+    <div id="form-container">
+        <form id="myForm" onsubmit="submitForm(event)">
+            <label for="modelo">Modelo do Carro *:</label>
+            <input type="text" id="modelo">
+
+            <label for="marca">Marca do Carro*:</label>
+            <input type="text" id="marca">
+
+            <label for="ano">Ano de Fabricação*:</label>
+            <input type="number" id="ano">
+
+            <label for="senha">Senha de Acesso*:</label>
+            <input type="password" id="senha">
+
+            <label for="pais">País de Fabricação*:</label>
+            <input type="text" id="pais">
+
+            <label for="pais">Habilite o campo e ganhe desconto (Até 50%)</label>
+            <input type="text" id="campoDesabilitado" disabled>
+
+            <label for="hora">Horário de Manutenção Preferido:</label>
+            <input type="time" id="hora">
+
+            <label for="linguagem">Combustível Preferido:</label>
+            <select id="combustivel">
+                <option value="selecione">Selecione</option>
+                <option value="gasolina">Gasolina</option>
+                <option value="etanol">Etanol</option>
+                <option value="diesel">Diesel</option>
+            </select>
+            <fieldset>
+                <legend><strong>Direção Hidráulica:</strong></legend>
+                <div class="field">
+                    <input type="checkbox" id="direcaoHidraulica" name="direcaoHidraulica">
+                </div>
+            </fieldset>
+
+            <label for="data">Data de Compra:</label>
+            <input type="date" id="data">
+
+            <label>Nível de Interesse:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="nivel" value="baixo"> Baixo</label>
+                <label><input type="radio" name="nivel" value="medio"> Médio</label>
+                <label><input type="radio" name="nivel" value="alto"> Alto</label>
+            </div>
+
+            <label for="cor">Cor Preferida:</label>
+            <input type="color" id="cor">
+
+                <label for="anexo">Enviar Foto do Carro:</label>
+                <input type="file" id="anexo" accept="image/*">
+                
+                
+            <fieldset class="group">
+                <legend><strong>Links Úteis sobre Carros</strong></legend>
+                <div class="field">
+                    <label>
+                        Dicas para escolher o <a href="link.html" target="_blank">carro ideal</a>.
+                    </label>
+                </div>
+                
+            </fieldset>
+            <button type="submit">Enviar Pedido</button>
+            <div id="mensagem-erro" class="mensagem erro">Preencha todos os campos obrigatórios!</div>
+            <div id="mensagem-sucesso" class="mensagem sucesso">Pedido realizado com sucesso!</div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

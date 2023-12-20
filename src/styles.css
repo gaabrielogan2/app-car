@@ -1,0 +1,288 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    text-align: center;
+    padding: 20px;
+}
+
+#header img {
+    max-width: 100px; /* Ajustei o tamanho da imagem para 80px */
+    height: auto;
+    border-radius: 50%;
+}
+
+h1 {
+    text-align: center;
+    color: #333; /* Cor do texto ajustada para um tom mais escuro */
+}
+
+#form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto; /* Centraliza o contêiner na tela */
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Adicionado espaço entre os campos */
+}
+
+.radio-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.button {
+    background-color: #007f00;
+    color: #fff;
+    border: 2px solid #007f00;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+.button:hover {
+    background-color: #005c00;
+}
+
+.mensagem {
+    font-weight: bold;
+    display: none;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#mensagem-sucesso {
+    color: #007f00;
+    background-color: #ccffcc;
+    border: 1px solid #66cc66;
+}
+
+#mensagem-erro {
+    color: #ff0000;
+    background-color: #ffc8c8;
+    border: 1px solid #ff6666;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    margin-right: 5px;
+}
+
+/* Estilo para os radio buttons */
+
+.radio-group label {
+    display: flex;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.radio-group input {
+    margin-right: 5px;
+}
+
+/* Estilo para o input color */
+input[type="color"] {
+    width: 40px; /* Largura desejada para o seletor de cor */
+    height: 40px; /* Altura desejada para o seletor de cor */
+    vertical-align: middle;
+    margin-bottom: 10px; /* Espaço entre o input color e o próximo elemento */
+}
+
+.color-preview {
+    display: inline-block;
+    width: 20px; /* Largura desejada para a visualização da cor */
+    height: 20px; /* Altura desejada para a visualização da cor */
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* Adiciona uma regra para destacar a visualização da cor quando o seletor de cor está em foco */
+input[type="color"]:focus + .color-preview {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.field a {
+    text-decoration: underline;
+    color: #007f00;
+}
+
+/* Estilo para o checkbox e a label associada */
+.field {
+    margin-top: 10px;
+}
+
+.field label {
+    display: flex;
+    align-items: center;
+}
+
+.field input[type="checkbox"] {
+    margin-right: 5px;
+    flex-shrink: 0;
+}
+
+/* Estilo para o botão Enviar */
+button {
+    background-color: #007f00;
+    color: #fff;
+    border: 2px solid #007f00;
+    border-radius: 5px;
+    padding: 15px 25px; /* Ajustei o padding para tornar o botão mais espaçoso */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Adiciona uma transição suave ao passar o mouse sobre o botão */
+button:hover {
+    background-color: #005c00;
+}
+
+
+/* Estilo melhorado para o bloco com link "Como burlar links com Cypress" */
+.field {
+    margin-top: 20px; /* Ajustado o espaçamento acima do bloco */
+}
+
+.field label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.field a {
+    text-decoration: none;
+    color: #007f00;
+    margin-left: 5px; /* Adicionado espaço à esquerda do link */
+    transition: color 0.3s ease; /* Adicionada transição suave à mudança de cor */
+}
+
+.field a:hover {
+    color: #005c00;
+}
+
+.field a::after {
+    content: '\2197'; /* Adicionado um ícone de seta para indicar que é um link externo */
+    margin-left: 3px;
+}
+
+.field a[target="_blank"]::after {
+    content: '\2197';
+    margin-left: 3px;
+}
+
+.field a[target="_blank"]:hover {
+    color: #051c05;
+}
+
+#cart {
+    font-size: 40px;
+    text-align: center;
+    display: none; 
+}
+
+#header img {
+    transition: transform 0.3s ease; /* Adiciona uma transição suave de 0.3 segundos para o zoom */
+}
+
+#header img:hover {
+    opacity: 0.8; /* Reduz a opacidade da imagem ao passar o mouse */
+    transform: scale(1.2); /* Aplica um zoom de 20% à imagem ao passar o mouse */
+}
+
+/* Estilo padrão para o campo desabilitado */
+#campoDesabilitado[disabled] {
+    color: #333; /* Cor de texto cinza para indicar que está desabilitado */
+    background-color: #f0efef; /* Cor de fundo mais clara */
+    border: 1px solid #ff0000; 
+}
+
+/* Estilo quando ativado */
+#campoDesabilitado:not([disabled]) {
+    color: #333; /* Cor de texto padrão quando ativado */
+    background-color: #fff; /* Cor de fundo padrão quando ativado */
+    border: 1px solid #ccc; /* Adiciona uma borda para destacar o campo */
+}
+
+
+/* Adicione estilos para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-conteudo {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.fechar {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    cursor: pointer;
+}
+
+

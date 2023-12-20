@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Galeria dos carros</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f4f4; /* Cor de fundo da página */
+        }
+
+        .gallery-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .gallery-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column; /* Exibe as imagens em coluna */
+            align-items: center;
+            margin: 20px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 8px; /* Adiciona borda arredondada */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        #myModal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        #modalContent {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 8px; /* Adiciona borda arredondada no modal */
+        }
+
+        #caption {
+            margin: 10px;
+            display: block;
+            color: #fff;
+            text-align: center;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="gallery-container">
+    <div class="gallery-title">Sugestão de carros</div>
+    <div class="gallery">
+        <img src="image1.jpeg" alt="Image 1" onclick="openModal('image1.jpeg', 'Desbravando o asfalto com velocidade e estilo, este carro é a personificação da liberdade sobre rodas.')">
+        <img src="image2.jpeg" alt="Image 2" onclick="openModal('image2.jpeg', 'Uma máquina de pura potência, pronto para conquistar qualquer estrada com seu design arrojado e performance impecável.')">
+        <img src="image3.jpeg" alt="Image 3" onclick="openModal('image3.jpeg', 'O equilíbrio perfeito entre robustez e sofisticação, este carro é a escolha ideal para quem busca aventura e conforto.')">
+        <img src="image4.jpeg" alt="Image 4" onclick="openModal('image4.jpeg', 'Deslizando pela cidade com elegância e presença, este carro redefine a experiência de dirigir com sua atitude única.')">
+        <!-- Adicione mais imagens conforme necessário -->
+    </div>
+</div>
+
+<div id="myModal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalContent" src="" alt="Modal Image">
+    <div id="caption"></div>
+</div>
+
+<script>
+    function openModal(imageSrc, captionText) {
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalContent");
+        var caption = document.getElementById("caption");
+
+        modal.style.display = "block";
+        modalImg.src = imageSrc;
+        caption.innerHTML = captionText;
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+</script>
+
+</body>
+</html>
